@@ -1,6 +1,14 @@
 # yield-checks
 
-Checks a published vault APY against what the vault's share price actually did.
+Published DeFi numbers, checked against the chain.
+
+This repository holds three things:
+
+- **[Cases](CASES.md):** errors I reported to data projects, with the evidence and the outcome. 8 so far, 3 fixed by the maintainers.
+- **A tool:** `share-price-check.mjs`, which checks a published vault APY against what the vault's share price actually did.
+- **[Reports](reports/):** dated runs of the tool, listing every pool checked.
+
+## The tool
 
 A yield aggregator publishes a number for a vault. The vault's share price is the primary source: it is what a depositor's position grew by, after fees. This script reads both and tells you where they disagree.
 
